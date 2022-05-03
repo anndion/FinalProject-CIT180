@@ -1,0 +1,215 @@
+/* Responsive layout is based on Grid View */
+
+* {
+    box-sizing:border-box;
+}
+.row::after{
+    content:"";
+    clear:both;
+    display:table;
+}    
+h1{
+    font-family:'Fira Sans Condensed', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: chocolate;
+    padding-left: 5%;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    text-shadow: 2px 2px rgb(25, 44, 68);
+    box-shadow: 2px 3px rgb(25, 44, 68);
+}
+h2{ 
+    font-size: 2em;
+}
+h3{
+    font-size: 1.2em;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', Arial, "sans-serif";
+    font-size:  1.2em;
+}  
+article {
+	padding: 5%;
+	color: black;
+	background-color: antiquewhite;
+    border-radius: 20px; 
+}
+aside {
+    background: rgb(243, 210, 175);
+    padding: 5%;
+    color: black;
+    text-align: center;
+    font-size: 14pt;   
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 4px rgb(25, 44, 68);
+}
+nav {
+    background-color:none;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+	list-style-type:none;
+    position: relative;
+    width: auto;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    display: inline-table;
+} 
+
+nav ul li {
+    display: inline-table;
+    border-radius: 10px;
+    border-bottom: rgb(25, 44, 68) 2px solid;
+    border-left: rgb(25, 44, 68) 2px solid;
+}    
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color:white;
+    text-decoration: none;
+}
+nav ul li:hover {
+     background: white;
+}
+
+nav ul li:hover>ul {
+    display:block;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    display:block;
+    background-color:chocolate;
+    color:white;
+   	text-decoration:none;
+    border-radius: 10px;  
+}
+
+nav ul li a:hover, nav ul li a:active {
+    display:block;
+    background-color:white;
+    color:chocolate;
+}
+
+nav ul ul {
+    display: none;
+    padding: 0px;
+    position: absolute;
+    top: 90%;
+    background:white;
+    border:2px solid rgb(25, 44, 68);
+    border-radius: 10px;
+}
+
+nav ul ul li {
+    display:block;
+    position: relative;
+    text-align:left;
+    margin:10px;
+}
+
+nav ul ul li a {
+    padding: 5px;
+    color: rgb(25, 44, 68);
+    background: chocolate;
+}
+
+nav ul ul li a:link, nav ul ul li a:visited {
+    font-size: 12pt;
+    display:block;
+    padding: 3px 0px 3px 3px;
+    background-color: chocolate;
+    color: white;
+}
+
+nav ul ul li a:hover, nav ul ul li a:active {
+    font-size: 12pt;
+    display:block;
+    padding: 3px 0px 3px 3px;
+    background-color: white;
+    color: chocolate;
+}
+.iconbar {
+    width: 100%;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    overflow: auto;
+  }
+  
+.iconbar a {
+    float: left;
+    width: 25%;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: chocolate;
+    font-size: 32px;
+}
+  
+.iconbar a:hover {
+    color: rgb(24, 73, 119);
+}
+
+footer{
+    text-align: center;
+    font-size: 12pt;
+    text-decoration: none;
+    color: black;
+
+}
+
+.swingimage{
+    transform-origin: 50% 0;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+@keyframes swinging{
+    0%{transform: rotate(10deg);}
+    50%{transform: rotate(-5deg)}
+    100%{transform: rotate(10deg);}
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%; /* this is being overridden in tablet and desktop */
+    float:left; /* setting defaults for everything including tablet and desktop */
+    padding:15px; /* setting defaults for everything including tablet and desktop */
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+}
